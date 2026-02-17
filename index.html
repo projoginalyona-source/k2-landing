@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K2 Cloud — полезные материалы</title>
-    <!-- Подключаем шрифт Google Fonts для современного вида -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome для иконок (бесплатно) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* ===== UI KIT K2 CLOUD ===== */
+        :root {
+            /* Цвета фона */
+            --bg-page: #F3F4F7;
+            --bg-white-solid: #FFFFFF;
+            --bg-white-84: rgba(255,255,255,0.84);
+            --bg-white-56: rgba(255,255,255,0.56);
+            --bg-contrast: #021F29;
+            --bg-contrast-interactive: #032C3A;
+
+            /* Цвета обводок */
+            --border-base: rgba(1,34,91,0.1);
+            --border-secondary: rgba(1,34,91,0.16);
+            --border-tritiary: rgba(1,34,91,0.36);
+            --border-dark: #021F29;
+            --border-brand: #08B7F4;
+            --border-brand-hover: #07A7DE;
+
+            /* Тени (elevation) */
+            --shadow-xs: 0 0 1px 0 rgba(0,0,0,0.05);
+            --shadow-s: 0 2px 8px 0 rgba(0,0,0,0.05);
+            --shadow-m: 0 4px 20px 0 rgba(0,0,0,0.05);
+            --shadow-l: 0 16px 32px -8px rgba(0,0,0,0.05);
+
+            /* Радиусы */
+            --radius-zero: 0px;
+            --radius-8: 8px;
+            --radius-12: 12px;
+            --radius-16: 16px;
+            --radius-24: 24px;
+            --radius-32: 32px;
+            --radius-full: 100000px;
+
+            /* Шрифт */
+            --font-family: 'Inter', sans-serif;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -18,9 +55,9 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: #f9fafc;
-            color: #1e293b;
+            font-family: var(--font-family);
+            background: var(--bg-page);
+            color: var(--text-primary);
             line-height: 1.5;
         }
 
@@ -30,11 +67,10 @@
             padding: 0 24px;
         }
 
-        /* Header */
         .header {
             padding: 24px 0;
-            border-bottom: 1px solid #e9edf4;
-            background: white;
+            border-bottom: 1px solid var(--border-base);
+            background: var(--bg-white-solid);
         }
 
         .logo {
@@ -43,126 +79,141 @@
             gap: 8px;
             font-weight: 700;
             font-size: 1.5rem;
-            color: #0b3b5c;
+            color: var(--bg-contrast);
         }
 
         .logo span {
-            background: #0b3b5c;
-            color: white;
+            background: var(--bg-contrast);
+            color: var(--bg-white-solid);
             padding: 4px 10px;
-            border-radius: 30px;
+            border-radius: var(--radius-full);
             font-size: 0.9rem;
             font-weight: 600;
         }
 
-        /* Hero */
         .hero {
             padding: 60px 0 40px;
             text-align: center;
-            background: white;
+            background: var(--bg-white-solid);
         }
 
         .hero h1 {
             font-size: 2.8rem;
-            font-weight: 700;
+            font-weight: 600; /* Уменьшил с 700 до 600, как на главной странице */
             letter-spacing: -0.02em;
             max-width: 800px;
             margin: 0 auto 16px;
-            color: #0b3b5c;
+            color: var(--bg-contrast);
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: #475569;
+            color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto 32px;
         }
 
         .btn-primary {
             display: inline-block;
-            background: #2563eb;
-            color: white;
+            background: var(--border-brand);
+            color: var(--bg-white-solid);
             font-weight: 600;
             padding: 14px 36px;
-            border-radius: 40px;
+            border-radius: var(--radius-full);
             text-decoration: none;
             font-size: 1.1rem;
             border: none;
             cursor: pointer;
-            transition: background 0.2s;
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: var(--shadow-s);
         }
 
         .btn-primary:hover {
-            background: #1d4ed8;
+            background: var(--border-brand-hover);
+            box-shadow: var(--shadow-m);
         }
 
         .btn-secondary {
             display: inline-block;
-            background: white;
-            color: #1e293b;
-            border: 1px solid #cbd5e1;
+            background: var(--bg-white-solid);
+            color: var(--text-primary);
+            border: 1px solid var(--border-base);
             padding: 12px 24px;
-            border-radius: 40px;
+            border-radius: var(--radius-full);
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: background 0.2s, border-color 0.2s;
         }
 
         .btn-secondary i {
             margin-right: 8px;
-            color: #2563eb;
+            color: var(--border-brand);
         }
 
         .btn-secondary:hover {
             background: #f1f5f9;
+            border-color: var(--border-secondary);
         }
 
-        /* Materials grid */
         .section-title {
             font-size: 2rem;
             font-weight: 700;
             text-align: center;
             margin: 48px 0 32px;
-            color: #0b3b5c;
+            color: var(--bg-contrast);
+        }
+
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 40px 0 24px;
+            color: var(--bg-contrast);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-title i {
+            color: var(--border-brand);
+            font-size: 1.8rem;
         }
 
         .materials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
-            margin-bottom: 48px;
+            margin-bottom: 24px;
         }
 
         .material-card {
-            background: white;
-            border-radius: 24px;
+            background: var(--bg-white-solid);
+            border-radius: var(--radius-24);
             padding: 24px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-            border: 1px solid #edf2f7;
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: var(--shadow-xs);
+            border: 1px solid var(--border-base);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
         }
 
         .material-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-            border-color: #b9d1f0;
+            box-shadow: var(--shadow-s);
+            border-color: var(--border-secondary);
         }
 
         .card-icon {
             font-size: 2rem;
             margin-bottom: 16px;
-            color: #2563eb;
+            color: var(--border-brand);
         }
 
         .card-title {
             font-size: 1.25rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 8px;
         }
 
         .card-desc {
-            color: #475569;
+            color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 16px;
         }
@@ -170,7 +221,7 @@
         .card-meta {
             font-size: 0.85rem;
             color: #64748b;
-            border-top: 1px solid #e9edf4;
+            border-top: 1px solid var(--border-base);
             padding-top: 12px;
             display: flex;
             align-items: center;
@@ -181,21 +232,136 @@
             margin-right: 4px;
         }
 
-        /* Form section */
+        .tg-posts {
+            margin: 60px 0 40px;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 8px 4px 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .post-card {
+            flex: 0 0 auto;
+            width: 280px;
+            background: var(--bg-white-solid);
+            border-radius: var(--radius-24);
+            padding: 0 0 24px 0;
+            border: 1px solid var(--border-base);
+            box-shadow: var(--shadow-xs);
+            scroll-snap-align: start;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            overflow: hidden;
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-s);
+            border-color: var(--border-secondary);
+        }
+
+        .post-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background: #e2e8f0;
+            display: block;
+        }
+
+        .post-icon {
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(145deg, var(--border-brand)20, #1e3c7220);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--border-brand);
+        }
+
+        .post-content {
+            padding: 20px 20px 0 20px;
+        }
+
+        .post-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--bg-contrast);
+        }
+
+        .post-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid var(--border-base);
+            padding: 12px 20px 0 20px;
+            margin-top: 8px;
+        }
+
+        .post-meta i {
+            margin-right: 4px;
+        }
+
+        .post-meta .tg-icon {
+            color: var(--border-brand);
+            font-size: 1rem;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: var(--border-base);
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+
+        .dot.active {
+            background: var(--border-brand);
+        }
+
         .form-section {
-            background: white;
-            border-radius: 32px;
+            background: var(--bg-white-solid);
+            border-radius: var(--radius-32);
             padding: 48px 40px;
             margin: 48px 0;
-            box-shadow: 0 20px 40px rgba(0, 20, 50, 0.08);
-            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-s);
+            border: 1px solid var(--border-base);
         }
 
         .form-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .form-content {
@@ -205,71 +371,105 @@
         .form-content h2 {
             font-size: 2rem;
             font-weight: 700;
-            color: #0b3b5c;
+            color: var(--bg-contrast);
             margin-bottom: 16px;
         }
 
         .form-content p {
-            color: #475569;
+            color: var(--text-secondary);
             margin-bottom: 24px;
         }
 
         .bonus-badge {
             background: #f0f9ff;
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid var(--border-brand);
             padding: 16px 20px;
-            border-radius: 16px;
+            border-radius: var(--radius-16);
             margin-top: 24px;
         }
 
         .bonus-badge strong {
             font-size: 1.1rem;
-            color: #0b3b5c;
+            color: var(--bg-contrast);
         }
 
         .form-fields {
-            flex: 1 1 300px;
+            flex: 1 1 400px;
             background: #f8fafc;
             padding: 32px;
-            border-radius: 24px;
+            border-radius: var(--radius-24);
+            border: 1px solid var(--border-base);
         }
 
         .form-group {
             margin-bottom: 20px;
         }
 
-        .form-group input {
+        .form-group input,
+        .form-group select {
             width: 100%;
             padding: 14px 18px;
-            border: 1px solid #cbd5e1;
-            border-radius: 30px;
+            border: 1px solid var(--border-base);
+            border-radius: var(--radius-32);
             font-size: 1rem;
             font-family: inherit;
-            background: white;
+            background: var(--bg-white-solid);
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
-        .form-group input:focus {
+        .form-group input:focus,
+        .form-group select:focus {
             outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+            border-color: var(--border-brand);
+            box-shadow: 0 0 0 3px rgba(8,183,244,0.1);
         }
 
-        .checkbox {
+        .checkbox-group {
+            margin-bottom: 24px;
+        }
+
+        .checkbox-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--bg-contrast);
+        }
+
+        .checkbox-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--border-brand);
+        }
+
+        .privacy-checkbox {
             display: flex;
             align-items: flex-start;
             gap: 12px;
             margin: 24px 0;
         }
 
-        .checkbox input {
+        .privacy-checkbox input {
             width: 18px;
             height: 18px;
             margin-top: 2px;
         }
 
-        .checkbox label {
+        .privacy-checkbox label {
             font-size: 0.9rem;
-            color: #475569;
+            color: var(--text-secondary);
         }
 
         .form-fields .btn-primary {
@@ -285,17 +485,17 @@
             text-align: center;
         }
 
-        /* Telegram block */
         .telegram-block {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            border-radius: 32px;
+            border-radius: var(--radius-32);
             padding: 48px 40px;
             margin: 48px 0;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            border: 1px solid var(--border-base);
         }
 
         .telegram-text h2 {
@@ -311,10 +511,10 @@
         }
 
         .telegram-btn {
-            background: white;
-            color: #1e3c72;
+            background: var(--bg-white-solid);
+            color: var(--bg-contrast);
             padding: 16px 40px;
-            border-radius: 40px;
+            border-radius: var(--radius-full);
             font-weight: 700;
             font-size: 1.2rem;
             text-decoration: none;
@@ -322,28 +522,29 @@
             align-items: center;
             gap: 10px;
             transition: 0.2s;
+            border: 1px solid var(--border-base);
         }
 
         .telegram-btn i {
             font-size: 1.5rem;
-            color: #1e3c72;
+            color: var(--border-brand);
         }
 
         .telegram-btn:hover {
             background: #eef2ff;
+            border-color: var(--border-secondary);
         }
 
-        /* Footer */
         .footer {
             padding: 32px 0;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid var(--border-base);
             text-align: center;
             color: #64748b;
             font-size: 0.9rem;
         }
 
         .footer a {
-            color: #2563eb;
+            color: var(--border-brand);
             text-decoration: none;
         }
 
@@ -351,6 +552,7 @@
             .hero h1 { font-size: 2rem; }
             .form-section { padding: 32px 20px; }
             .telegram-block { padding: 32px 20px; }
+            .post-card { width: 240px; }
         }
     </style>
 </head>
@@ -360,7 +562,6 @@
             <div class="logo">
                 K2 Cloud <span>провайдер</span>
             </div>
-            <!-- можно добавить навигацию, но для ленда не обязательно -->
         </div>
     </header>
 
@@ -373,44 +574,38 @@
     </section>
 
     <div class="container">
-        <h2 class="section-title">Выберите лид‑магниты</h2>
+        <h2 class="section-title">Материалы по теме</h2>
+
+        <!-- Категория 1: 1С в облаке -->
+        <div class="category-title">
+            <i class="fas fa-cloud"></i> 1С в облаке
+        </div>
         <div class="materials-grid">
-            <!-- Карточка 1 -->
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-file-pdf"></i></div>
                 <div class="card-title">Гайдбук по облачной 1С</div>
                 <div class="card-desc">Полное руководство по развёртыванию 1С в облаке: архитектура, лицензирование, оптимизация.</div>
                 <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 10,8 МБ</div>
             </div>
-            <!-- Карточка 2 -->
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
                 <div class="card-title">Чек-лист миграции 1С в облако</div>
                 <div class="card-desc">20+ пунктов для бесшовного переноса 1С: риски, сроки, контрольные точки.</div>
                 <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 120 КБ</div>
             </div>
-            <!-- Карточка 3 -->
+        </div>
+
+        <!-- Категория 2: Безопасность -->
+        <div class="category-title">
+            <i class="fas fa-shield-alt"></i> Безопасность
+        </div>
+        <div class="materials-grid">
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
                 <div class="card-title">Чек-лист облачной безопасности</div>
                 <div class="card-desc">Основные меры защиты данных в облаке: настройки, политики, аудит.</div>
                 <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 260 КБ</div>
             </div>
-            <!-- Карточка 4 -->
-            <div class="material-card">
-                <div class="card-icon"><i class="fas fa-robot"></i></div>
-                <div class="card-title">Инфраструктура для ИИ из облака K2</div>
-                <div class="card-desc">Как выбрать конфигурацию GPU, сторить и масштабировать среды для машинного обучения.</div>
-                <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 1,7 МБ</div>
-            </div>
-            <!-- Карточка 5 -->
-            <div class="material-card">
-                <div class="card-icon"><i class="fas fa-code"></i></div>
-                <div class="card-title">Чек-лист знаний хорошего DevOps'а</div>
-                <div class="card-desc">Оценка компетенций команды: от CI/CD до мониторинга и IaC.</div>
-                <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 1,2 МБ</div>
-            </div>
-            <!-- Карточка 6 -->
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-file-excel"></i></div>
                 <div class="card-title">Анкета зрелости ИБ</div>
@@ -419,15 +614,98 @@
             </div>
         </div>
 
-        <!-- Форма подписки -->
+        <!-- Категория 3: Инфраструктура и ИИ -->
+        <div class="category-title">
+            <i class="fas fa-microchip"></i> Инфраструктура и ИИ
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <div class="card-icon"><i class="fas fa-code"></i></div>
+                <div class="card-title">Чек-лист знаний хорошего DevOps'а</div>
+                <div class="card-desc">Оценка компетенций команды: от CI/CD до мониторинга и IaC.</div>
+                <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 1,2 МБ</div>
+            </div>
+            <div class="material-card">
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                <div class="card-title">Инфраструктура для ИИ из облака K2</div>
+                <div class="card-desc">Как выбрать конфигурацию GPU, строить и масштабировать среды для машинного обучения.</div>
+                <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 1,7 МБ</div>
+            </div>
+        </div>
+
+        <!-- Блок с постами из Telegram (карусель с картинками) -->
+        <div class="tg-posts">
+            <h2 class="section-title">Что мы пишем в Telegram</h2>
+            <div class="carousel">
+                <!-- Пост 885: GPU (с картинкой) -->
+                <a href="https://t.me/k2cloudlive/885" class="post-card" target="_blank">
+                    <img class="post-image" src="https://raw.githubusercontent.com/projoginalyona-source/k2-landing/main/images/photo_2026-02-17%2017.14.13.jpeg?raw=true" alt="Серверы с GPU">
+                    <div class="post-content">
+                        <div class="post-title">Серверы с GPU из К2 Облака: что выбрать?</div>
+                        <div class="post-excerpt">Высокопроизводительные мощности графических карт без больших вложений в оборудование.</div>
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar-alt"></i> 29 янв</span>
+                        <span class="tg-icon"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <!-- Пост 894: L40S (с картинкой) -->
+                <a href="https://t.me/k2cloudlive/894" class="post-card" target="_blank">
+                    <img class="post-image" src="https://raw.githubusercontent.com/projoginalyona-source/k2-landing/main/images/2026-02-17%2017.23.18.jpg?raw=true" alt="NVIDIA L40S">
+                    <div class="post-content">
+                        <div class="post-title">NVIDIA L40S GPU: тест-драйв за полцены</div>
+                        <div class="post-excerpt">Выгодная альтернатива H100/A100, превосходящая T4 по производительности и памяти.</div>
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar-alt"></i> 5 фев</span>
+                        <span class="tg-icon"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <!-- Пост 893: дайджест (с картинкой) -->
+                <a href="https://t.me/k2cloudlive/893" class="post-card" target="_blank">
+                    <img class="post-image" src="https://raw.githubusercontent.com/projoginalyona-source/k2-landing/main/images/photo_2026-02-17%2017.14.46.jpeg?raw=true" alt="Кейс Айсберри">
+                    <div class="post-content">
+                        <div class="post-title">Делимся ключевыми новостями за январь</div>
+                        <div class="post-excerpt">Защита данных, резервное копирование и влияние облаков на фармацевтику — главные темы месяца.</div>
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar-alt"></i> 4 фев</span>
+                        <span class="tg-icon"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <!-- Карточка-приглашение (ведёт прямо на канал) -->
+                <a href="https://t.me/k2cloudlive" class="post-card" target="_blank">
+                    <div class="post-icon"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="post-content">
+                        <div class="post-title">Больше инсайтов в канале</div>
+                        <div class="post-excerpt">Кейсы, новости и эксклюзивные материалы — подписывайтесь, чтобы не пропустить.</div>
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="fas fa-users"></i> @k2cloudlive</span>
+                        <span class="tg-icon"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div style="text-align: center; margin-top: 16px;">
+                <a href="https://t.me/k2cloudlive" class="btn-secondary" target="_blank"><i class="fab fa-telegram-plane"></i> Подписаться на канал</a>
+            </div>
+        </div>
+
+        <!-- Форма подписки с чекбоксами и бонусом -->
         <div class="form-section" id="form">
             <div class="form-grid">
                 <div class="form-content">
                     <h2>Получите материалы на почту</h2>
-                    <p>Укажите, какие чек‑листы вас интересуют, и мы пришлём их мгновенно. А в welcome‑письме — бонус.</p>
+                    <p>Подпишитесь на темы и отрасли, которые вам интересны, — мы будем присылать вам только релевантные материалы. А в welcome-письме — бонус.</p>
                     <div class="bonus-badge">
-                        <strong><i class="fas fa-gift" style="margin-right: 8px;"></i>Бонус в welcome‑письме</strong>
-                        <p style="margin-top: 8px;">K2 Cloud Research Book 2025 — исследование трендов облачного рынка (50+ страниц аналитики и кейсов).</p>
+                        <strong><i class="fas fa-gift" style="margin-right: 8px;"></i>Бонус: чек‑лист «10 шагов к безопасной облачной миграции»</strong>
+                        <p style="margin-top: 8px;">Краткий практический гайд: от аудита до первого запуска в облаке.</p>
                     </div>
                 </div>
                 <div class="form-fields">
@@ -438,25 +716,70 @@
                         <div class="form-group">
                             <input type="email" placeholder="Рабочий email" required>
                         </div>
-                        <!-- Можно добавить скрытое поле для отслеживания выбранных материалов через JS, но для простоты опустим -->
-                        <div class="checkbox">
+
+                        <!-- Блок выбора тематик -->
+                        <div class="checkbox-group">
+                            <label>Какие темы вас интересуют?</label>
+                            <div class="checkbox-options">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="topic-infra" value="infrastructure">
+                                    <label for="topic-infra">Инфраструктура и DevOps</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="topic-security" value="security">
+                                    <label for="topic-security">Безопасность</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="topic-1c" value="1c">
+                                    <label for="topic-1c">1С в облаке</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="topic-bigdata" value="bigdata">
+                                    <label for="topic-bigdata">Big Data и аналитика</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="topic-ai" value="ai">
+                                    <label for="topic-ai">ИИ и GPU</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Блок выбора отрасли -->
+                        <div class="checkbox-group">
+                            <label>Ваша отрасль</label>
+                            <div class="checkbox-options">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="industry-banks" value="banks">
+                                    <label for="industry-banks">Банки и страховые</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="industry-retail" value="retail">
+                                    <label for="industry-retail">Ритейл и FMCG</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="industry-oil" value="oil">
+                                    <label for="industry-oil">Нефтегаз</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="industry-metal" value="metal">
+                                    <label for="industry-metal">Металлургия</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="industry-other" value="other">
+                                    <label for="industry-other">Другое</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="privacy-checkbox">
                             <input type="checkbox" id="agree" checked required>
                             <label for="agree">Соглашаюсь на обработку персональных данных и получение информационных писем. Можно отписаться в любой момент.</label>
                         </div>
-                        <button type="submit" class="btn-primary">Скачать выбранные материалы</button>
+                        <button type="submit" class="btn-primary">Получить материалы и подписаться на рассылку</button>
                         <div class="footnote">Никакого спама, только полезное</div>
                     </form>
                 </div>
             </div>
-        </div>
-
-        <!-- Блок Telegram -->
-        <div class="telegram-block">
-            <div class="telegram-text">
-                <h2>Присоединяйтесь к Telegram‑каналу</h2>
-                <p>K2 Cloud Insider — еженедельные дайджесты, анонсы вебинаров и эксклюзивные материалы сразу в мессенджере.</p>
-            </div>
-            <a href="#" class="telegram-btn"><i class="fab fa-telegram-plane"></i> Перейти в Telegram</a>
         </div>
     </div>
 
@@ -467,7 +790,6 @@
         </div>
     </footer>
 
-    <!-- Небольшой скрипт для плавного скролла к форме -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -478,6 +800,19 @@
                 }
             });
         });
+
+        const carousel = document.querySelector('.carousel');
+        const dots = document.querySelectorAll('.dot');
+        if (carousel) {
+            carousel.addEventListener('scroll', () => {
+                const scrollLeft = carousel.scrollLeft;
+                const itemWidth = carousel.querySelector('.post-card')?.offsetWidth + 20 || 300;
+                const activeIndex = Math.round(scrollLeft / itemWidth);
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === activeIndex);
+                });
+            });
+        }
     </script>
 </body>
 </html>
