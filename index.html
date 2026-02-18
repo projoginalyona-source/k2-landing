@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K2 Cloud — полезные материалы</title>
+<<<<<<< HEAD
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -48,6 +49,15 @@
             --text-secondary: #475569;
         }
 
+=======
+    <!-- Подключаем шрифт Google Fonts для современного вида -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome для иконок (бесплатно) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         * {
             margin: 0;
             padding: 0;
@@ -55,9 +65,15 @@
         }
 
         body {
+<<<<<<< HEAD
             font-family: var(--font-family);
             background: var(--bg-page);
             color: var(--text-primary);
+=======
+            font-family: 'Onest', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: #F3F4F7; /* background / page-bg */
+            color: #021F29; /* text&icons / base */
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             line-height: 1.5;
         }
 
@@ -67,16 +83,25 @@
             padding: 0 24px;
         }
 
+<<<<<<< HEAD
         .header {
             padding: 24px 0;
             border-bottom: 1px solid var(--border-base);
             background: var(--bg-white-solid);
+=======
+        /* Header */
+        .header {
+            padding: 24px 0;
+            border-bottom: 1px solid #e9edf4;
+            background: white;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 8px;
+<<<<<<< HEAD
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--bg-contrast);
@@ -87,10 +112,23 @@
             color: var(--bg-white-solid);
             padding: 4px 10px;
             border-radius: var(--radius-full);
+=======
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #021F29;
+        }
+
+        .logo span {
+            background: #032C3A; /* background / contrast-interactive */
+            color: white;
+            padding: 4px 10px;
+            border-radius: 32px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             font-size: 0.9rem;
             font-weight: 600;
         }
 
+<<<<<<< HEAD
         .hero {
             padding: 60px 0 40px;
             text-align: center;
@@ -104,26 +142,55 @@
             max-width: 800px;
             margin: 0 auto 16px;
             color: var(--bg-contrast);
+=======
+        /* Hero */
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            color: #021F29;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .hero p {
             font-size: 1.2rem;
+<<<<<<< HEAD
             color: var(--text-secondary);
+=======
+            color: rgba(2, 31, 41, 0.7);
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             max-width: 700px;
             margin: 0 auto 32px;
         }
 
         .btn-primary {
             display: inline-block;
+<<<<<<< HEAD
             background: var(--border-brand);
             color: var(--bg-white-solid);
             font-weight: 600;
             padding: 14px 36px;
             border-radius: var(--radius-full);
+=======
+            background: #08B7F4; /* background / brand */
+            color: white;
+            font-weight: 600;
+            padding: 14px 36px;
+            border-radius: 32px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             text-decoration: none;
             font-size: 1.1rem;
             border: none;
             cursor: pointer;
+<<<<<<< HEAD
             transition: background 0.2s, box-shadow 0.2s;
             box-shadow: var(--shadow-s);
         }
@@ -131,15 +198,37 @@
         .btn-primary:hover {
             background: var(--border-brand-hover);
             box-shadow: var(--shadow-m);
+=======
+            transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+            box-shadow:
+                0 0 2px rgba(85, 94, 114, 0.10),
+                0 16px 32px -8px rgba(85, 94, 114, 0.10);
+        }
+
+        .btn-primary:hover {
+            background: #07A7DE; /* background / brand-hover */
+            box-shadow:
+                0 0 2px rgba(85, 94, 114, 0.10),
+                0 24px 56px -4px rgba(85, 94, 114, 0.16);
+            transform: translateY(-1px);
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .btn-secondary {
             display: inline-block;
+<<<<<<< HEAD
             background: var(--bg-white-solid);
             color: var(--text-primary);
             border: 1px solid var(--border-base);
             padding: 12px 24px;
             border-radius: var(--radius-full);
+=======
+            background: white;
+            color: #021F29;
+            border: 1px solid rgba(1, 34, 91, 0.16); /* border / secondary */
+            padding: 12px 24px;
+            border-radius: 32px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             font-weight: 600;
             text-decoration: none;
             transition: background 0.2s, border-color 0.2s;
@@ -147,6 +236,7 @@
 
         .btn-secondary i {
             margin-right: 8px;
+<<<<<<< HEAD
             color: var(--border-brand);
         }
 
@@ -176,12 +266,30 @@
         .category-title i {
             color: var(--border-brand);
             font-size: 1.8rem;
+=======
+            color: #08B7F4;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(1, 34, 91, 0.05); /* background / control */
+            border-color: rgba(1, 34, 91, 0.36); /* border / tritiary */
+        }
+
+        /* Materials grid */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 400;
+            text-align: center;
+            margin: 48px 0 32px;
+            color: #021F29;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .materials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
+<<<<<<< HEAD
             margin-bottom: 24px;
         }
 
@@ -191,37 +299,74 @@
             padding: 24px;
             box-shadow: var(--shadow-xs);
             border: 1px solid var(--border-base);
+=======
+            margin-bottom: 48px;
+        }
+
+        .material-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow:
+                0 0 2px rgba(85, 94, 114, 0.10),
+                0 16px 32px -8px rgba(85, 94, 114, 0.10);
+            border: 1px solid rgba(1, 34, 91, 0.10); /* border / base */
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
         }
 
         .material-card:hover {
             transform: translateY(-4px);
+<<<<<<< HEAD
             box-shadow: var(--shadow-s);
             border-color: var(--border-secondary);
+=======
+            box-shadow:
+                0 0 2px rgba(85, 94, 114, 0.10),
+                0 24px 56px -4px rgba(85, 94, 114, 0.16);
+            border-color: rgba(1, 34, 91, 0.16); /* border / secondary */
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .card-icon {
             font-size: 2rem;
             margin-bottom: 16px;
+<<<<<<< HEAD
             color: var(--border-brand);
+=======
+            color: #08B7F4;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .card-title {
             font-size: 1.25rem;
+<<<<<<< HEAD
             font-weight: 600;
+=======
+            font-weight: 700;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             margin-bottom: 8px;
         }
 
         .card-desc {
+<<<<<<< HEAD
             color: var(--text-secondary);
+=======
+            color: rgba(2, 31, 41, 0.7);
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             font-size: 0.95rem;
             margin-bottom: 16px;
         }
 
         .card-meta {
             font-size: 0.85rem;
+<<<<<<< HEAD
             color: #64748b;
             border-top: 1px solid var(--border-base);
+=======
+            color: rgba(2, 31, 41, 0.5);
+            border-top: 1px solid rgba(1, 34, 91, 0.10); /* border / base */
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             padding-top: 12px;
             display: flex;
             align-items: center;
@@ -232,6 +377,7 @@
             margin-right: 4px;
         }
 
+<<<<<<< HEAD
         .tg-posts {
             margin: 60px 0 40px;
         }
@@ -355,13 +501,29 @@
             margin: 48px 0;
             box-shadow: var(--shadow-s);
             border: 1px solid var(--border-base);
+=======
+        /* Form section */
+        .form-section {
+            background: white;
+            border-radius: 32px;
+            padding: 48px 40px;
+            margin: 48px 0;
+            box-shadow:
+                0 0 2px rgba(85, 94, 114, 0.10),
+                0 24px 56px -4px rgba(85, 94, 114, 0.16);
+            border: 1px solid rgba(1, 34, 91, 0.10); /* border / base */
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .form-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
+<<<<<<< HEAD
             align-items: flex-start;
+=======
+            align-items: center;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .form-content {
@@ -370,26 +532,43 @@
 
         .form-content h2 {
             font-size: 2rem;
+<<<<<<< HEAD
             font-weight: 700;
             color: var(--bg-contrast);
+=======
+            font-weight: 400;
+            color: #021F29;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             margin-bottom: 16px;
         }
 
         .form-content p {
+<<<<<<< HEAD
             color: var(--text-secondary);
+=======
+            color: rgba(2, 31, 41, 0.7);
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             margin-bottom: 24px;
         }
 
         .bonus-badge {
+<<<<<<< HEAD
             background: #f0f9ff;
             border-left: 4px solid var(--border-brand);
             padding: 16px 20px;
             border-radius: var(--radius-16);
+=======
+            background: rgba(1, 34, 91, 0.05); /* background / control */
+            border-left: 4px solid #08B7F4;
+            padding: 16px 20px;
+            border-radius: 16px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             margin-top: 24px;
         }
 
         .bonus-badge strong {
             font-size: 1.1rem;
+<<<<<<< HEAD
             color: var(--bg-contrast);
         }
 
@@ -399,12 +578,23 @@
             padding: 32px;
             border-radius: var(--radius-24);
             border: 1px solid var(--border-base);
+=======
+            color: #021F29;
+        }
+
+        .form-fields {
+            flex: 1 1 300px;
+            background: rgba(1, 34, 91, 0.05); /* background / control */
+            padding: 32px;
+            border-radius: 24px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .form-group {
             margin-bottom: 20px;
         }
 
+<<<<<<< HEAD
         .form-group input,
         .form-group select {
             width: 100%;
@@ -457,10 +647,32 @@
         .privacy-checkbox {
             display: flex;
             align-items: flex-start;
+=======
+        .form-group input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid rgba(1, 34, 91, 0.16); /* border / secondary */
+            border-radius: 30px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: white;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #08B7F4;
+            box-shadow: 0 0 0 3px rgba(8, 183, 244, 0.24);
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             gap: 12px;
             margin: 24px 0;
         }
 
+<<<<<<< HEAD
         .privacy-checkbox input {
             width: 18px;
             height: 18px;
@@ -470,6 +682,44 @@
         .privacy-checkbox label {
             font-size: 0.9rem;
             color: var(--text-secondary);
+=======
+        .checkbox input {
+            width: 18px;
+            height: 18px;
+            margin-top: 0;
+        }
+
+        .checkbox label {
+            font-size: 0.9rem;
+            color: rgba(2, 31, 41, 0.7);
+            line-height: 1.4;
+        }
+
+        .field-label {
+            font-size: 0.9rem;
+            color: #021F29;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(2, 31, 41, 0.7);
+        }
+
+        .radio-option input {
+            width: 16px;
+            height: 16px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .form-fields .btn-primary {
@@ -480,22 +730,37 @@
 
         .footnote {
             font-size: 0.8rem;
+<<<<<<< HEAD
             color: #64748b;
+=======
+            color: rgba(2, 31, 41, 0.5);
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             margin-top: 16px;
             text-align: center;
         }
 
+<<<<<<< HEAD
         .telegram-block {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             border-radius: var(--radius-32);
+=======
+        /* Telegram block */
+        .telegram-block {
+            background: linear-gradient(135deg, #032C3A, #021F29); /* contrast-interactive → contrast */
+            color: white;
+            border-radius: 32px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             padding: 48px 40px;
             margin: 48px 0;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+<<<<<<< HEAD
             border: 1px solid var(--border-base);
+=======
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .telegram-text h2 {
@@ -511,10 +776,17 @@
         }
 
         .telegram-btn {
+<<<<<<< HEAD
             background: var(--bg-white-solid);
             color: var(--bg-contrast);
             padding: 16px 40px;
             border-radius: var(--radius-full);
+=======
+            background: white;
+            color: #021F29;
+            padding: 16px 40px;
+            border-radius: 40px;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             font-weight: 700;
             font-size: 1.2rem;
             text-decoration: none;
@@ -522,11 +794,15 @@
             align-items: center;
             gap: 10px;
             transition: 0.2s;
+<<<<<<< HEAD
             border: 1px solid var(--border-base);
+=======
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
 
         .telegram-btn i {
             font-size: 1.5rem;
+<<<<<<< HEAD
             color: var(--border-brand);
         }
 
@@ -540,11 +816,30 @@
             border-top: 1px solid var(--border-base);
             text-align: center;
             color: #64748b;
+=======
+            color: #08B7F4;
+        }
+
+        .telegram-btn:hover {
+            background: rgba(1, 34, 91, 0.05); /* background / control */
+        }
+
+        /* Footer */
+        .footer {
+            padding: 32px 0;
+            border-top: 1px solid rgba(1, 34, 91, 0.10); /* border / base */
+            text-align: center;
+            color: rgba(2, 31, 41, 0.5);
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             font-size: 0.9rem;
         }
 
         .footer a {
+<<<<<<< HEAD
             color: var(--border-brand);
+=======
+            color: #07A7DE;
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             text-decoration: none;
         }
 
@@ -552,7 +847,10 @@
             .hero h1 { font-size: 2rem; }
             .form-section { padding: 32px 20px; }
             .telegram-block { padding: 32px 20px; }
+<<<<<<< HEAD
             .post-card { width: 240px; }
+=======
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         }
     </style>
 </head>
@@ -562,6 +860,10 @@
             <div class="logo">
                 K2 Cloud <span>провайдер</span>
             </div>
+<<<<<<< HEAD
+=======
+            <!-- можно добавить навигацию, но для ленда не обязательно -->
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         </div>
     </header>
 
@@ -574,6 +876,7 @@
     </section>
 
     <div class="container">
+<<<<<<< HEAD
         <h2 class="section-title">Материалы по теме</h2>
 
         <!-- Категория 1: 1С в облаке -->
@@ -581,18 +884,28 @@
             <i class="fas fa-cloud"></i> 1С в облаке
         </div>
         <div class="materials-grid">
+=======
+        <h2 class="section-title">Выберите лид‑магниты</h2>
+        <div class="materials-grid">
+            <!-- Карточка 1 -->
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-file-pdf"></i></div>
                 <div class="card-title">Гайдбук по облачной 1С</div>
                 <div class="card-desc">Полное руководство по развёртыванию 1С в облаке: архитектура, лицензирование, оптимизация.</div>
                 <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 10,8 МБ</div>
             </div>
+<<<<<<< HEAD
+=======
+            <!-- Карточка 2 -->
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
                 <div class="card-title">Чек-лист миграции 1С в облако</div>
                 <div class="card-desc">20+ пунктов для бесшовного переноса 1С: риски, сроки, контрольные точки.</div>
                 <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 120 КБ</div>
             </div>
+<<<<<<< HEAD
         </div>
 
         <!-- Категория 2: Безопасность -->
@@ -600,12 +913,33 @@
             <i class="fas fa-shield-alt"></i> Безопасность
         </div>
         <div class="materials-grid">
+=======
+            <!-- Карточка 3 -->
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
                 <div class="card-title">Чек-лист облачной безопасности</div>
                 <div class="card-desc">Основные меры защиты данных в облаке: настройки, политики, аудит.</div>
                 <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 260 КБ</div>
             </div>
+<<<<<<< HEAD
+=======
+            <!-- Карточка 4 -->
+            <div class="material-card">
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                <div class="card-title">Инфраструктура для ИИ из облака K2</div>
+                <div class="card-desc">Как выбрать конфигурацию GPU, сторить и масштабировать среды для машинного обучения.</div>
+                <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 1,7 МБ</div>
+            </div>
+            <!-- Карточка 5 -->
+            <div class="material-card">
+                <div class="card-icon"><i class="fas fa-code"></i></div>
+                <div class="card-title">Чек-лист знаний хорошего DevOps'а</div>
+                <div class="card-desc">Оценка компетенций команды: от CI/CD до мониторинга и IaC.</div>
+                <div class="card-meta"><i class="far fa-file-pdf"></i> PDF • 1,2 МБ</div>
+            </div>
+            <!-- Карточка 6 -->
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
             <div class="material-card">
                 <div class="card-icon"><i class="fas fa-file-excel"></i></div>
                 <div class="card-title">Анкета зрелости ИБ</div>
@@ -614,6 +948,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <!-- Категория 3: Инфраструктура и ИИ -->
         <div class="category-title">
             <i class="fas fa-microchip"></i> Инфраструктура и ИИ
@@ -698,14 +1033,24 @@
         </div>
 
         <!-- Форма подписки с чекбоксами и бонусом -->
+=======
+        <!-- Форма подписки -->
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
         <div class="form-section" id="form">
             <div class="form-grid">
                 <div class="form-content">
                     <h2>Получите материалы на почту</h2>
+<<<<<<< HEAD
                     <p>Подпишитесь на темы и отрасли, которые вам интересны, — мы будем присылать вам только релевантные материалы. А в welcome-письме — бонус.</p>
                     <div class="bonus-badge">
                         <strong><i class="fas fa-gift" style="margin-right: 8px;"></i>Бонус: чек‑лист «10 шагов к безопасной облачной миграции»</strong>
                         <p style="margin-top: 8px;">Краткий практический гайд: от аудита до первого запуска в облаке.</p>
+=======
+                    <p>Укажите, какие чек‑листы вас интересуют, и мы пришлём их мгновенно. А в welcome‑письме — бонус.</p>
+                    <div class="bonus-badge">
+                        <strong><i class="fas fa-gift" style="margin-right: 8px;"></i>Бонус в welcome‑письме</strong>
+                        <p style="margin-top: 8px;">K2 Cloud Research Book 2025 — исследование трендов облачного рынка (50+ страниц аналитики и кейсов).</p>
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
                     </div>
                 </div>
                 <div class="form-fields">
@@ -716,6 +1061,7 @@
                         <div class="form-group">
                             <input type="email" placeholder="Рабочий email" required>
                         </div>
+<<<<<<< HEAD
 
                         <!-- Блок выбора тематик -->
                         <div class="checkbox-group">
@@ -776,11 +1122,44 @@
                             <label for="agree">Соглашаюсь на обработку персональных данных и получение информационных писем. Можно отписаться в любой момент.</label>
                         </div>
                         <button type="submit" class="btn-primary">Получить материалы и подписаться на рассылку</button>
+=======
+                        <div class="form-group">
+                            <p class="field-label">Кто вы?</p>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="role" value="lpr" required>
+                                    <span>ЛПР (руководитель, собственник, топ‑менеджер)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="role" value="engineer">
+                                    <span>Инженер / ИТ‑специалист</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Можно добавить скрытое поле для отслеживания выбранных материалов через JS, но для простоты опустим -->
+                        <div class="checkbox">
+                            <input type="checkbox" id="agree" checked required>
+                            <label for="agree">Соглашаюсь на обработку персональных данных и получение информационных писем. Можно отписаться в любой момент.</label>
+                        </div>
+                        <button type="submit" class="btn-primary">Скачать выбранные материалы</button>
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
                         <div class="footnote">Никакого спама, только полезное</div>
                     </form>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+
+        <!-- Блок Telegram -->
+        <div class="telegram-block">
+            <div class="telegram-text">
+                <h2>Присоединяйтесь к Telegram‑каналу</h2>
+                <p>K2 Cloud Insider — еженедельные дайджесты, анонсы вебинаров и эксклюзивные материалы сразу в мессенджере.</p>
+            </div>
+            <a href="#" class="telegram-btn"><i class="fab fa-telegram-plane"></i> Перейти в Telegram</a>
+        </div>
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
     </div>
 
     <footer class="footer">
@@ -790,6 +1169,10 @@
         </div>
     </footer>
 
+<<<<<<< HEAD
+=======
+    <!-- Небольшой скрипт для плавного скролла к форме -->
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -800,6 +1183,7 @@
                 }
             });
         });
+<<<<<<< HEAD
 
         const carousel = document.querySelector('.carousel');
         const dots = document.querySelectorAll('.dot');
@@ -813,6 +1197,8 @@
                 });
             });
         }
+=======
+>>>>>>> 1e93db8 (Инициализировать лендинг и применить UI kit)
     </script>
 </body>
 </html>
